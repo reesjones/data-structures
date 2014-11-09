@@ -6,16 +6,14 @@ import java.util.*;
 public interface IList<E> extends Iterable
 {
      
-    /**
-     * This adds an element to the end of the list
+    /** This adds an element to the end of the list
      * 
      * @param e the element being added to the list
      */
     public void add(E e);
      
      
-    /**
-     * This adds the element e to the list at index
+    /** This adds the element e to the list at index
      * 
      * @param index integer representing the position in the list
      * @param e the element being added to the list
@@ -23,8 +21,7 @@ public interface IList<E> extends Iterable
     public void add(int index, E e);
    
    
-    /**
-     * Removes the element at the position stated. Shifts all elements after it to the left one
+    /** Removes the element at the position stated. Shifts all elements after it to the left one
      *
      * @param index is the position of the element being deleted
      * @return the removed element
@@ -33,24 +30,20 @@ public interface IList<E> extends Iterable
     public E remove(int index);
   
      
-    /**
-     * Removes the FIRST occurence of the specified element (ie .equals()).
+    /** Removes the FIRST occurence of the specified element (ie .equals()).
      *
      * @param o is the element that is being searched for in the list
      * @return true if the first occurence is deleted, and false if the element is not in the IList
      */
     public boolean remove(Object o);
  
-    /**
-     * 
-     * Removes any element in this IList that is also in the Collection c
+    /** Removes any element in this IList that is also in the Collection c
      * @param c is the Collection of elements to be removed
      * @return true if at least one element is removed from this IList
      */
     public boolean removeAll(Collection<?> c);
      
-    /**
-     * Intersects the existing IList<E> with a Collection<?> c
+    /** Intersects the existing IList<E> with a Collection<?> c
      * passed in such that only elements contained in both the IList
      * and the Collection are retained.
      * 
@@ -59,24 +52,21 @@ public interface IList<E> extends Iterable
      */
     public boolean retainAll(Collection<?> c);
                       
-    /**
-     * The size function returns the integer number of elements in this IList.
+    /** The size function returns the integer number of elements in this IList.
      */
     public int size();
      
-    /**
-     * Removes all elements from this IList and reduces size to 0.
+    /** Removes all elements from this IList and reduces size to 0.
+     * 
      */
     public void clear();
      
-    /**
-     * Returns true if the list contains no elements.
+    /** Returns true if the list contains no elements.
      * @return true if the list contains no elements
      */
     public boolean isEmpty();
      
-    /** 
-     * Returns the element with type E at the given index
+    /** Returns the element with type E at the given index
      * @author D Block Data Structures
      * @param index  The postion of the desired element within the list 
      * @return   Returns the element with type E at the given index
@@ -85,8 +75,7 @@ public interface IList<E> extends Iterable
      */
     public E get(int index);
                          
-    /**
-     * Puts element at index in the IList
+    /** Puts element at index in the IList
      * @param index  The postion of the pointer which points at the desired position within the list    
      * @param element   The element that the user wishes to store into the list 
      * @return   Returns the element with type E at the given index
@@ -97,21 +86,18 @@ public interface IList<E> extends Iterable
     public E set(int index, E element);
      
      
-    /**
-     * Returns this IList as an Object[].
+    /** Returns this IList as an Object[].
      * @return an Object[] containing all elements from this IList, in order.
      */
     public Object[] toArray();
      
-    /**
-     * This checks if the Object o is in this IList
+    /** This checks if the Object o is in this IList
      * @param o the Object that is being checked for membership in this IList
      * @return true if Object is in IList
      */
     public boolean contains(Object o);
      
-    /**
-     * Returns a range of the original list from {@code fromIndex} to {@code toIndex}.
+    /** Returns a range of the original list from {@code fromIndex} to {@code toIndex}.
      * 
      * @param fromIndex the beginning point of the sublist
      * @param toIndex the end point of the sublist
@@ -120,8 +106,7 @@ public interface IList<E> extends Iterable
     public IList<E> subList(int fromIndex, int toIndex);
      
  
-    /**
-     * This checks if the Object o is of the same type of IList.
+    /** This checks if the Object o is of the same type of IList.
      * It also checks the equals method of each pair of elements at index 0 to n and returns false if
      * any pair returns false.  Otherwise it returns true indicating that each IList contains the
      * the same elements in the same order.
@@ -130,8 +115,7 @@ public interface IList<E> extends Iterable
      */
     public boolean equals(Object o);
      
-    /** 
-     * Returns the index of the first occurence of Object o or -1 if the Object is not an element in this IList 
+    /** Returns the index of the first occurence of Object o or -1 if the Object is not an element in this IList 
      * @param o the object we are looking for in the IList
      * @return returns the index at which Object o first appears. If the object is not an element of the list, this method returns -1
      * 
@@ -151,8 +135,7 @@ public interface IList<E> extends Iterable
      */
     public int lastIndexOf(Object o);
      
-    /**
-     * Iterator returns an iterator for the elements in this list in the order in which they appear
+    /** Iterator returns an iterator for the elements in this list in the order in which they appear
      */
     public Iterator<E> iterator();
    

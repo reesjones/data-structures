@@ -89,15 +89,9 @@ public class DuhList<E> implements IList<E>, Iterator<E>
   public void add(E e)
   {
     add(duhSize, e);
-// Remove later when we feel more confident that this is the correct way to solve this.
-//      if(duhSize >= duhArray.length)
-//      {
-//          changeSize();
-//      }
-//      duhArray[duhSize] = e;
-//      duhSize++;
   }
-  
+
+
   public void add(int index, E e)
   {
     if(duhSize >= duhArray.length)
@@ -116,9 +110,10 @@ public class DuhList<E> implements IList<E>, Iterator<E>
     arrayCopy(duhArray, index+1, duhArray, index, duhSize - index);
     duhSize--;
     return ret;
-  } 
+  }
+
   /*
-   * removes first insance of the object o.
+   * Removes first insance of the object o.
    */
   public boolean remove(Object o)
   {
@@ -149,38 +144,6 @@ public class DuhList<E> implements IList<E>, Iterator<E>
   //returns true if this DuhList changes in the process.
   public boolean retainAll(Collection<?> c)
   {
-    /*
-     boolean flag = false;
-     
-     for(int i = duhSize-1; i >= 0 && duhSize > 0; i--)
-     {
-     System.out.println(i);
-     
-     if(!c.contains(duhArray[i]))
-     {
-     remove(i);
-     flag = true;
-     }
-     
-     }
-     return flag;
-     */
-    /*        
-     for(Object cElement : c)
-     {
-     if(!contains(cElement))
-     {
-     while(remove(cElement))
-     {
-     flag = true;
-     }
-     }
-     }
-     return flag;
-     */      
-    
-    
-    
     System.out.printf("duhsize = %s\n", duhSize);
     boolean flagellate = false;
     for(int k = 0; k < duhSize; k++)
@@ -218,9 +181,6 @@ public class DuhList<E> implements IList<E>, Iterator<E>
   @SuppressWarnings("unchecked")
   public E get(int index)
   {
-    //TODO make this suck less
-    
-    
     return (E)duhArray[index];
   } 
   
@@ -273,38 +233,6 @@ public class DuhList<E> implements IList<E>, Iterator<E>
       }
     }
     return true;
-    
-    /*
-     if(!(o instanceof DuhList))
-     {
-     return false;
-     }
-     
-     DuhList other = (DuhList)o;
-     
-     if(this.duhSize != other.size())
-     {
-     return false;
-     }
-     
-     
-     for(int i = 0; i < duhSize; i++)
-     {
-     if(duhArray[i] != null)
-     {
-     if(!duhArray[i].equals(other.get(i)))
-     {
-     return false;
-     }
-     }
-     else if(other.get(i) != null)
-     {
-     return false;
-     }
-     
-     }
-     return true;
-     */
   } 
   
   public int indexOf(Object o)

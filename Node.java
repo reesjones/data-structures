@@ -1,3 +1,6 @@
+/* This is the object used as the elements in DuhLinkedList
+ * 
+ */
 public class Node<E> {
   
   private Node<E> next;
