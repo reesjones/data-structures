@@ -15,10 +15,10 @@ An array-based data structure with functionality similar to ArrayList. It utiliz
 The testing class used for testing and debugging **DuhList.java**. See the **ListTester.java** description below.
 
 ### DuhLinkedList.java
-Coming soon! [11/9/14]
+LinkedList data structure implementing the **IList.java** interface.
 
 ### DuhHashTable.java
-Coming soon! [11/9/14]
+HashTable data structure implementing the **IList.java** interface.
 
 ### Node.java
 The object used as the LinkedList elements in **DuhLinkedList.java**. Contains getters, setters, and *getNext()*/*setNext()* methods.
